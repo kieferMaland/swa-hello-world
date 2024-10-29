@@ -1,25 +1,24 @@
-import SmallCard from '../components/SmallCard';
-import { projectIcons } from '../components/Icons';
+// pages/index.js
 
-import { projects } from '../utils/projectsData';
-
-const Home = () => (
-  <div className="home">
-    <h1>What Can I Deploy to Static Apps?</h1>
-    <div className="card-grid">
-      {projects.map((project) => {
-        const Icon = projectIcons[project.id];
-        return (
-          <SmallCard
-            key={project.id}
-            Icon={Icon}
-            title={project.name}
-            slug={project.slug}
-          />
-        );
-      })}
-    </div>
-  </div>
-);
-
-export default Home;
+export default function Home() {
+    return (
+      <div className="container">
+        <h1>Hi Ron</h1>
+        <style jsx>{`
+          .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+          }
+          h1 {
+            color: limegreen;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 3rem;
+          }
+        `}</style>
+      </div>
+    );
+  }
+  
